@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -24,7 +26,7 @@ import java.util.ArrayList;
 
 public class stratagemViewer extends AppCompatActivity implements Serializable {
 
-
+    String spinnerUnit = "UNIVERSAL";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,31 @@ public class stratagemViewer extends AppCompatActivity implements Serializable {
 
         Search search = (Search)getIntent().getSerializableExtra("Search");
 
+        TextView phase = (TextView) findViewById(R.id.phase);
+        switch (search.getPhase()){
+            case "0":
+                phase.setText("Deployment");
+                break;
+            case "1":
+                phase.setText("Command");
+                break;
+            case "2":
+                phase.setText("Movement");
+                break;
+            case "3":
+                phase.setText("Psychic");
+                break;
+            case "4":
+                phase.setText("Shooting");
+                break;
+            case "5":
+                phase.setText("Assault");
+                break;
+            case "6":
+                phase.setText("Morale");
+                break;
+
+        }
 
 
         Toast toast = Toast.makeText(stratagemViewer.this, search.getArmy(), Toast.LENGTH_LONG);
@@ -111,30 +138,79 @@ public class stratagemViewer extends AppCompatActivity implements Serializable {
                 null               // The sort order
         );
 
-        ArrayList<String> stratagemList = new ArrayList<>();
+        ArrayList<String> unitList = new ArrayList<>();
         while (cursor.moveToNext()){
-            stratagemList.add(cursor.getString(cursor.getColumnIndex("name")));
+            if(!unitList.contains(cursor.getString(cursor.getColumnIndex("unit")).toUpperCase())){
+                unitList.add(cursor.getString(cursor.getColumnIndex("unit")).toUpperCase());
+            }
+
 
         }
+        //Spinner
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, stratagemList);
-        ListView listView = (ListView) findViewById(R.id.list_view);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        Spinner spinner = (Spinner) findViewById(R.id.unitSpinner);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                cursor.moveToPosition(position);
-                String name = cursor.getString(cursor.getColumnIndex("name"));
-                String desc = cursor.getString(cursor.getColumnIndex("desc"));
-                int cost = Integer.parseInt(cursor.getString(cursor.getColumnIndex("cost")));
-                infoDetail InfoDetail = new infoDetail(name,desc,cost);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                parent.getItemAtPosition(position);
 
-                Intent intent = new Intent(stratagemViewer.this, detailView.class);
-                intent.putExtra("InfoDetail", InfoDetail);
-                startActivity(intent);
+
+                spinnerUnit = unitList.get(position);
+//                Toast toast = Toast.makeText(MainActivity.this, Army+" Selected", Toast.LENGTH_LONG);
+//                toast.show();
+                SQLiteDatabase db2 = myDbHelper.getReadableDatabase();
+                Cursor cursor2 = db.query(
+                        "stratagem_table",   // The table to query
+                        null,             // The array of columns to return (pass null to get all)
+                        ("(phase ="+search.getPhase()+ " OR phase = 7) AND unit = '" +spinnerUnit+"' "), // The columns for the WHERE clause
+                        null,          // The values for the WHERE clause
+                        null,                   // don't group the rows
+                        null,                   // don't filter by row groups
+                        null               // The sort order
+                );
+
+                ArrayList<String> stratagemList = new ArrayList<>();
+                while (cursor2.moveToNext()){
+                    stratagemList.add(cursor2.getString(cursor.getColumnIndex("name")));
+
+                }
+
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(stratagemViewer.this, android.R.layout.simple_list_item_1, stratagemList);
+                ListView listView = (ListView) findViewById(R.id.list_view);
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        cursor2.moveToPosition(position);
+                        String name = cursor2.getString(cursor2.getColumnIndex("name"));
+                        String desc = cursor2.getString(cursor2.getColumnIndex("desc"));
+                        int cost = Integer.parseInt(cursor2.getString(cursor2.getColumnIndex("cost")));
+                        infoDetail InfoDetail = new infoDetail(name,desc,cost);
+
+                        Intent intent = new Intent(stratagemViewer.this, detailView.class);
+                        intent.putExtra("InfoDetail", InfoDetail);
+                        intent.putExtra("Search", search);
+                        startActivity(intent);
+
+                    }
+                });
+                listView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
-        listView.setAdapter(adapter);
+
+
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<String> unitAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, unitList);
+        // Specify the layout to use when the list of choices appears
+        unitAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner.setAdapter(unitAdapter);
+
+
 
 
     }

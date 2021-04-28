@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.Serializable;
@@ -19,6 +20,9 @@ public class phasePage extends AppCompatActivity implements Serializable {
 
 
         Search search = (Search)getIntent().getSerializableExtra("Search");
+
+        TextView commandPts = (TextView) findViewById(R.id.commandPts);
+        commandPts.setText("Remaining CP: " + search.getRemainingCp());
 
 
         //Deployment Phase Button

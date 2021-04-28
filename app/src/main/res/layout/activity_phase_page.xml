@@ -7,6 +7,7 @@
     tools:context=".phasePage">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="171dp"
         android:layout_height="410dp"
         android:layout_marginStart="120dp"
@@ -59,4 +60,16 @@
             android:text="Morale" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/commandPts"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
 </androidx.constraintlayout.widget.ConstraintLayout>
