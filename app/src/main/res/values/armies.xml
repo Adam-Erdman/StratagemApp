@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <string-array name="armies_array">
+            <item>Space Wolves</item>
+            <item>Space Marines</item>
+        </string-array>
+
+</resources>
