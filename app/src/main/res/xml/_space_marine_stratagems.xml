@@ -143,7 +143,21 @@
         <name>HIT-AND-RUN WARFARE</name>
         <desc>Use this Stratagem in your Movement phase, when an ADEPTUS ASTARTES BIKER, LAND SPEEDER or STORM SPEEDER unit from your army Falls Back. That unit is still eligible to shoot this turn even though it Fell Back.</desc>
         <phase>2</phase>
-        <unit>BIKER, LAND SPEEDER, STORM SPEEDER</unit>
+        <unit>BIKER</unit>
+        <cost>1</cost>
+    </entry>
+    <entry>
+        <name>HIT-AND-RUN WARFARE</name>
+        <desc>Use this Stratagem in your Movement phase, when an ADEPTUS ASTARTES BIKER, LAND SPEEDER or STORM SPEEDER unit from your army Falls Back. That unit is still eligible to shoot this turn even though it Fell Back.</desc>
+        <phase>2</phase>
+        <unit>LAND SPEEDER</unit>
+        <cost>1</cost>
+    </entry>
+    <entry>
+        <name>HIT-AND-RUN WARFARE</name>
+        <desc>Use this Stratagem in your Movement phase, when an ADEPTUS ASTARTES BIKER, LAND SPEEDER or STORM SPEEDER unit from your army Falls Back. That unit is still eligible to shoot this turn even though it Fell Back.</desc>
+        <phase>2</phase>
+        <unit>STORM SPEEDER</unit>
         <cost>1</cost>
     </entry>
 
@@ -159,7 +173,21 @@
         <name>SKILLED RIDERS</name>
         <desc>Use this Stratagem in your opponent's Shooting phase, when an ADEPTUS ASTARTES BIKER, LAND SPEEDER or STORM SPEEDER unit from your army that Advanced is selected as the target of a ranged attack. Until the end of the phase, each time an attack is made against that unit, subtract l from that attack's hit roll.</desc>
         <phase>4</phase>
-        <unit>BIKER, LAND SPEEDER, STORM SPEEDER</unit>
+        <unit>BIKER</unit>
+        <cost>1</cost>
+    </entry>
+    <entry>
+        <name>SKILLED RIDERS</name>
+        <desc>Use this Stratagem in your opponent's Shooting phase, when an ADEPTUS ASTARTES BIKER, LAND SPEEDER or STORM SPEEDER unit from your army that Advanced is selected as the target of a ranged attack. Until the end of the phase, each time an attack is made against that unit, subtract l from that attack's hit roll.</desc>
+        <phase>4</phase>
+        <unit>LAND SPEEDER</unit>
+        <cost>1</cost>
+    </entry>
+    <entry>
+        <name>SKILLED RIDERS</name>
+        <desc>Use this Stratagem in your opponent's Shooting phase, when an ADEPTUS ASTARTES BIKER, LAND SPEEDER or STORM SPEEDER unit from your army that Advanced is selected as the target of a ranged attack. Until the end of the phase, each time an attack is made against that unit, subtract l from that attack's hit roll.</desc>
+        <phase>4</phase>
+        <unit>STORM SPEEDER</unit>
         <cost>1</cost>
     </entry>
 
@@ -243,7 +271,16 @@
             The selected unit cannot fire Overwatch or Set to Defend.
             Each time a model in the selected unit makes an attack, subtract 1 from that attack's hit roll.</desc>
         <phase>4</phase>
-        <unit>SHOCK GRENADES, LAND SPEEDER STORM</unit>
+        <unit>SHOCK GRENADES</unit>
+        <cost>1</cost>
+    </entry>
+    <entry>
+        <name>SHOCK AND AWE</name>
+        <desc>Use this Stratagem in your Shooting phase, when an ADEPTUS ASTARTES SHOCK GRENADES or LAND SPEEDER STORM unit from your army is selected to shoot. Select one enemy unit within 6" of that unit. Until the start of your next turn:
+            The selected unit cannot fire Overwatch or Set to Defend.
+            Each time a model in the selected unit makes an attack, subtract 1 from that attack's hit roll.</desc>
+        <phase>4</phase>
+        <unit>LAND SPEEDER STORM</unit>
         <cost>1</cost>
     </entry>
 

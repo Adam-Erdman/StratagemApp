@@ -57,7 +57,16 @@
             Until the end of the turn, each time a friendly SPACE WOLVES BEAST or SPACE WOLVES CAVALRY unit declares a charge that targets the selected unit, roll one additional D6 and discard one of the dice.
             Until the end of the turn, each time a friendly SPACE WOLVES CAVALRY model makes an attack with its crushing teeth and claws against the selected unit, and each time a friendly SPACE WOLVES BEAST model makes an attack with its teeth and claws against the selected unit, you can re-roll the wound roll.</desc>
         <phase>5</phase>
-        <unit>BEAST, CALVARY</unit>
+        <unit>BEAST</unit>
+        <cost>2</cost>
+    </entry>
+    <entry>
+        <name>PACK HUNTERS</name>
+        <desc>Use this Stratagem in your Charge phase. Select one enemy unit within Engagement Range of any SPACE WOLVES units from your army.
+            Until the end of the turn, each time a friendly SPACE WOLVES BEAST or SPACE WOLVES CAVALRY unit declares a charge that targets the selected unit, roll one additional D6 and discard one of the dice.
+            Until the end of the turn, each time a friendly SPACE WOLVES CAVALRY model makes an attack with its crushing teeth and claws against the selected unit, and each time a friendly SPACE WOLVES BEAST model makes an attack with its teeth and claws against the selected unit, you can re-roll the wound roll.</desc>
+        <phase>5</phase>
+        <unit>CALVARY</unit>
         <cost>2</cost>
     </entry>
 
@@ -112,7 +121,21 @@
         <name>BESTIAL NATURE</name>
         <desc>Use this Stratagem in your Command phase if a combat doctrine is active for your army. Select one SPACE WOLVES INFANTRY, SPACE WOLVES CAVALRY or SPACE WOLVES BIKER unit from your army. Until the start of your next Command phase, that unit gains the bonus of the Assault Doctrine instead of the active combat doctrine.</desc>
         <phase>1</phase>
-        <unit>INFANTRY, CALVARY, BIKER</unit>
+        <unit>INFANTRY</unit>
+        <cost>1</cost>
+    </entry>
+    <entry>
+        <name>BESTIAL NATURE</name>
+        <desc>Use this Stratagem in your Command phase if a combat doctrine is active for your army. Select one SPACE WOLVES INFANTRY, SPACE WOLVES CAVALRY or SPACE WOLVES BIKER unit from your army. Until the start of your next Command phase, that unit gains the bonus of the Assault Doctrine instead of the active combat doctrine.</desc>
+        <phase>1</phase>
+        <unit>CALVARY</unit>
+        <cost>1</cost>
+    </entry>
+    <entry>
+        <name>BESTIAL NATURE</name>
+        <desc>Use this Stratagem in your Command phase if a combat doctrine is active for your army. Select one SPACE WOLVES INFANTRY, SPACE WOLVES CAVALRY or SPACE WOLVES BIKER unit from your army. Until the start of your next Command phase, that unit gains the bonus of the Assault Doctrine instead of the active combat doctrine.</desc>
+        <phase>1</phase>
+        <unit>BIKER</unit>
         <cost>1</cost>
     </entry>
     <entry>
@@ -126,7 +149,21 @@
         <name>KEEN SENSES</name>
         <desc>Use this Stratagem in your Shooting phase. Select one SPACE WOLVES INFANTRY, SPACE WOLVES BIKER or SPACE WOLVES CAVALRY unit from your army. Until the end of the turn, you can ignore any or all hit roll, Ballistic skill and Weapon skill modifiers, and each time you make a charge roll for that unit, you can ignore any or all modifiers to that charge roll.</desc>
         <phase>4</phase>
-        <unit>INFANTRY, CALVARY, BIKER</unit>
+        <unit>INFANTRY</unit>
+        <cost>1</cost>
+    </entry>
+    <entry>
+        <name>KEEN SENSES</name>
+        <desc>Use this Stratagem in your Shooting phase. Select one SPACE WOLVES INFANTRY, SPACE WOLVES BIKER or SPACE WOLVES CAVALRY unit from your army. Until the end of the turn, you can ignore any or all hit roll, Ballistic skill and Weapon skill modifiers, and each time you make a charge roll for that unit, you can ignore any or all modifiers to that charge roll.</desc>
+        <phase>4</phase>
+        <unit>CALVARY</unit>
+        <cost>1</cost>
+    </entry>
+    <entry>
+        <name>KEEN SENSES</name>
+        <desc>Use this Stratagem in your Shooting phase. Select one SPACE WOLVES INFANTRY, SPACE WOLVES BIKER or SPACE WOLVES CAVALRY unit from your army. Until the end of the turn, you can ignore any or all hit roll, Ballistic skill and Weapon skill modifiers, and each time you make a charge roll for that unit, you can ignore any or all modifiers to that charge roll.</desc>
+        <phase>4</phase>
+        <unit>BIKER</unit>
         <cost>1</cost>
     </entry>
 
