@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"  ?>
+<feed xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--    deployment -0-->
+    <!--    command - 1-->
+    <!--    movement -2-->
+    <!--    psychic - 3-->
+    <!--    shooting -4-->
+    <!--    assault - 5-->
+    <!--    morale - 6-->
+    <!--    all - 7-->
+
+
+    <entry>
+        <name>MUTOID INFESTATION</name>
+        <desc>Use this Stratagem at the end of your Movement phase. Choose a unit of MUTOID VERMIN from your army that has been destroyed. Set up this unit anywhere wholly within 12" of a friendly GELLERPOX INFECTED unit and more than 9” from any enemy models.</desc>
+        <phase>2</phase>
+        <unit>MUTOID VERMIN</unit>
+        <cost>1</cost>
+    </entry>
+
+    <entry>
+        <name>FIERY DEMISE</name>
+        <desc>Use this Stratagem when VULGRAR THRICE-CURSED is slain. Before removing him from the battlefield, roll a D6 for each unit within 6"; on a 4+ that unit suffers a mortal wound.</desc>
+        <phase>7</phase>
+        <unit>VULGRAR THRICE-SLAIN</unit>
+        <cost>1</cost>
+    </entry>
+
+    <entry>
+        <name>CORRUPTION AND DECAY</name>
+        <desc>Use this Stratagem at the start of the Fight phase. Choose an enemy unit within 3" of a GELLERPOX INFECTED unit from your army. Until the end of the phase, add 1 to all wound rolls made for GELLERPOX INFECTED models from your army when they target this enemy unit.</desc>
+        <phase>5</phase>
+        <unit>GELLERPOX INFECTED</unit>
+        <cost>1</cost>
+    </entry>
+
+    <entry>
+        <name>RANCID VOMIT</name>
+        <desc>Use this Stratagem in your Shooting phase. Choose a HULLBREAKERS model from your army, then choose an enemy unit within 6" of it that is visible to it. Roll three D6; for each roll of 5+ that enemy unit suffers a mortal wound.</desc>
+        <phase>4</phase>
+        <unit>HULLBREAKERS</unit>
+        <cost>1</cost>
+    </entry>
+
+    <entry>
+        <name>MACHINE GLITCH</name>
+        <desc>Use this Stratagem after a unit of GLITCHLINGS from your army has fought in the Fight phase. Choose an enemy VEHICLE unit within 1" of that unit and roll one D6 for each model in your unit; for each roll of 4+ the enemy unit suffers a mortal wound.</desc>
+        <phase>5</phase>
+        <unit>GLITCHLINGS</unit>
+        <cost>1</cost>
+    </entry>
+    <entry>
+        <name>GELLERSHIFT</name>
+        <desc>Use this Stratagem before you move the VOX-SHAMBLERS in the Movement phase. Instead of moving this unit normally, it can make a Gellershift. Remove this unit from the battlefield, then, at the end of the Movement phase, set it up again anywhere that is more than 9" from any enemy models.</desc>
+        <phase>2</phase>
+        <unit>VOX-SHAMBLERS</unit>
+        <cost>1</cost>
+    </entry>
+
+    <entry>
+        <name>INSANE GIBBERINES</name>
+        <desc>Use this Stratagem at the start of the enemy Psychic phase. Until the end of the phase, subtract 1 from Psychic tests taken for enemy PSYKERS whilst they are within 18” of VULGRAR THRICE-CURSED.</desc>
+        <phase>3</phase>
+        <unit>VULGAR THRICE-CURSED</unit>
+        <cost>1</cost>
+    </entry>
+
+    <entry>
+        <name>TWISTED BLESSINGS</name>
+        <desc>Use this Stratagem at the end of your Movement phase. Choose a HULLBREAKERS model from your army. That model regains one lost wound.</desc>
+        <phase>2</phase>
+        <unit>HULLBREAKERS</unit>
+        <cost>1</cost>
+    </entry>
+
+</feed>

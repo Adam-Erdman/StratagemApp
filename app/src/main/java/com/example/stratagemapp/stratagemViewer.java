@@ -233,6 +233,22 @@ public class stratagemViewer extends AppCompatActivity implements Serializable {
             displayDb(search, parser, myDbHelper, "_core_stratagems");
 
         }
+        else if (searchArmy.equals("Death Guard")){
+            parser = getResources().getXml(R.xml._deathguard_stratagems);
+            displayDb(search, parser,myDbHelper, "_deathguard_stratagems");
+            parser = getResources().getXml(R.xml._core_stratagems);
+            displayDb(search, parser, myDbHelper, "_core_stratagems");
+
+        }
+        else if (searchArmy.equals("Death Guard W/ VULGAR")){
+            parser = getResources().getXml(R.xml._deathguard_stratagems);
+            displayDb(search, parser,myDbHelper, "_deathguard_stratagems");
+            parser = getResources().getXml(R.xml._deathguard_stratagems_gellerpox);
+            displayDb(search, parser,myDbHelper, "_deathguard_stratagems_gellerpox");
+            parser = getResources().getXml(R.xml._core_stratagems);
+            displayDb(search, parser, myDbHelper, "_core_stratagems");
+
+        }
         else{
             parser = getResources().getXml(R.xml._core_stratagems);
             displayDb(search, parser, myDbHelper, "_core_stratagems");

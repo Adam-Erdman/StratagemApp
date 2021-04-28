@@ -2,8 +2,10 @@
 <resources>
 
         <string-array name="armies_array">
-            <item>Space Wolves</item>
+            <item>Death Guard</item>
+            <item>Death Guard W/ VULGAR</item>
             <item>Space Marines</item>
+            <item>Space Wolves</item>
         </string-array>
 
 </resources>

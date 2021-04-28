@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class phasePage extends AppCompatActivity implements Serializable {
 
         TextView commandPts = (TextView) findViewById(R.id.commandPts);
         commandPts.setText("Remaining CP: " + search.getRemainingCp());
+
 
 
         //Deployment Phase Button
@@ -116,8 +118,29 @@ public class phasePage extends AppCompatActivity implements Serializable {
             }
         });
 
+        //edit text
+        EditText adjustCommandPoints = (EditText) findViewById(R.id.adjustCommandPoints);
 
+
+        //Submit Button
+        Button submitAdjust = (Button) findViewById(R.id.submitAdjust);
+        submitAdjust.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (adjustCommandPoints.getText().toString().trim().length()>0){
+                    search.setRemainingCP(Integer.parseInt(adjustCommandPoints.getText().toString()));
+                    commandPts.setText("Remaining CP: " + search.getRemainingCp());
+                    Toast toast = Toast.makeText(phasePage.this, "Command Points Updated", Toast.LENGTH_LONG);
+                    toast.show();
+                    adjustCommandPoints.setText(null);
+                }
+            }
+        });
 
 
     }
-}
+
+
+    }
+
+
