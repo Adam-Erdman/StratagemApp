@@ -173,14 +173,6 @@
 
     <entry>
         <name>STEADY ADVANCE</name>
-        <desc>Use this Stratagem in your Shooting phase. Select one ADEPTUS ASTARTES INFANTRY unit from your army that is performing an action. That unit can shoot this phase without that action failing.</desc>
-        <phase>4</phase>
-        <unit>INFANTRY</unit>
-        <cost>2</cost>
-    </entry>
-
-    <entry>
-        <name>STEADY ADVANCE</name>
         <desc>Use this Stratagem in your Movement phase, when an ADEPTUS ASTARTES INFANTRY unit from your army makes a Normal Move. Until the end of the turn, that unit is considered to have Remained Stationary.</desc>
         <phase>2</phase>
         <unit>INFANTRY</unit>
