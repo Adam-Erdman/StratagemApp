@@ -21,9 +21,9 @@ Depending on which phase the user selects and the unit keyword, a query is made 
 On Click the user enters a detail view with the description, cost and an ability to spend the command points.
 
 ## Tech Stack
-Android Studio
-
-Java
+* Android Studio
+* Java
+* XML
 
 ## Initial design
 https://docs.google.com/drawings/d/1IJMV7644aq9qUySTAQ9UZNhN9M_CtnErCLAvVpJZVW4/edit?usp=sharing
