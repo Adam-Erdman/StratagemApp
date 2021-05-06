@@ -14,7 +14,7 @@ Never again miss out on using that obscure stratagem at just the right moment.
 ## Architecture 
 Army stratagems are stored in XML files with each object containing the following characteristics: Phase, Description, Command Point Cost, unit Keywords.
 
-When the user selects and army an XML parser reads the XML document tied to that army and creates a SQLite database with the information parsed from the XML file.
+When the user selects an army the XML parser reads the XML document for that army and creates a SQLite database with the information parsed from the XML file.
 
 Depending on which phase the user selects and the unit keyword, a query is made which populates a list view with all the usable stratagems.
 
