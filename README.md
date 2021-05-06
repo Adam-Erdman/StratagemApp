@@ -15,6 +15,7 @@ On Click the user enters a detail view with the description, cost and an ability
 
 ## Tech Stack
 Android Studio
+
 Java
 
 ## Initial design
