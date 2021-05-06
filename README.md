@@ -4,6 +4,9 @@ This repository holds the development of a Warhammer 40,000 stratagem companion 
 usable form based on what army you are playing, what phase of the turn is active, and unit keywords selected to give you a more digestible short list of stratagems available to you.
 Never again miss out on using that obscure stratagem at just the right moment.
 
+![StratagemApp](https://github.com/Adam-Erdman/StratagemApp/blob/master/stratagemapp1.png?raw=true)
+![Screenshot](stratagemapp1.png)
+
 ## Architecture 
 Army stratagems are stored in XML files with each object containing the following characteristics: Phase, Description, Command Point Cost, unit Keywords.
 
